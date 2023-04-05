@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ColorModeScript } from "@chakra-ui/react"
+import theme from "src/lib/theme";
 
 class MyDocument extends Document {
   render() {
@@ -18,7 +19,7 @@ class MyDocument extends Document {
           <meta name="google-site-verification" content="pr2dEIF-6zFdjXlDxutqEokeinrQNLx5qAjeVCqASDY" />
         </Head>
         <body>
-          <ColorModeScript />
+          <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
           <Main />
           <NextScript />
         </body>

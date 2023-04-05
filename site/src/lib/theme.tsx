@@ -1,6 +1,7 @@
 import { theme as chakraTheme } from "@chakra-ui/react";
 
 const theme = {
+  initialColorMode: 'system',
   ...chakraTheme,
   fonts: {
     ...chakraTheme.fonts,

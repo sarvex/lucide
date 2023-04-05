@@ -129,7 +129,7 @@ const Header = ({ data }: HeaderProps) => {
           align="center"
         >
           <WrapItem flexBasis="100%" style={{ marginBottom: 0 }}>
-            <NextLink href="/packages" passHref>
+            <NextLink href="/packages" legacyBehavior passHref>
               <Link _hover={{ opacity: 0.8 }} marginX="auto">
                 <Text fontSize="md" opacity={0.5} as="p" textAlign="center" width="100%">
                   Available for:
@@ -139,7 +139,7 @@ const Header = ({ data }: HeaderProps) => {
           </WrapItem>
           {packages.map(({ name, href, Logo, label }) => (
             <WrapItem key={name}>
-              <NextLink href={href} key={name} passHref>
+              <NextLink href={href} key={name} legacyBehavior passHref>
                 <Link _hover={{ opacity: 0.8 }} aria-label={label}>
                   <Logo />
                 </Link>
@@ -147,7 +147,7 @@ const Header = ({ data }: HeaderProps) => {
             </WrapItem>
           ))}
           <WrapItem>
-            <NextLink href="/packages" passHref>
+            <NextLink href="/packages" legacyBehavior passHref>
               <Link _hover={{ opacity: 0.8 }} marginX="auto">
                 <Text fontSize="md" opacity={0.5}>More options</Text>
               </Link>

@@ -92,7 +92,7 @@ const components = {
       <NextLink
         href={isExternal ? href : `/docs/${link}`}
         {...rest}
-        passHref
+        legacyBehavior passHref
       >
         <Link isExternal={isExternal} color='#F56565'>{children}</Link>
       </NextLink>

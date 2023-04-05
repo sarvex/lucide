@@ -17,7 +17,7 @@ const DocsMenu = (props: BoxProps) => {
             <Box as="ul" style={{ listStyle: 'none' }} marginBottom={6}>
               {items.map(({ href, title }) => (
                 <Box as="li" key={title}>
-                  <NextLink href={`/docs/${href}`} passHref>
+                  <NextLink href={`/docs/${href}`} legacyBehavior passHref>
                     <Link
                       _hover={{ opacity: linkIsActive(router.asPath, href) ? 1 : 0.8 }}
                       display="block"

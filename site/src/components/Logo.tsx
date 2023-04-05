@@ -3,7 +3,7 @@ import LogoImage from '../../public/logo.svg';
 import NextLink from 'next/link';
 
 const Logo = () => (
-  <NextLink href="/" passHref>
+  <NextLink href="/" legacyBehavior passHref>
     <Link display="flex" _hover={{ textDecoration: 'none' }}>
       <Icon boxSize={12} marginRight="8px">
         <LogoImage />

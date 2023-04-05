@@ -90,7 +90,7 @@ const Layout = ({ aside, children }: LayoutProps) => {
                     );
                   }
                   return (
-                    <NextLink href={menuItem.href} passHref key={menuItem.name}>
+                    <NextLink href={menuItem.href} legacyBehavior passHref key={menuItem.name}>
                       <Link marginRight={8} fontSize="lg">
                         {menuItem.name}
                       </Link>

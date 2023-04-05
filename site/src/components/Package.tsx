@@ -87,7 +87,7 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
           <Text mb={3}>{description}</Text>
           <ButtonGroup spacing={2}>
             {shields.map(({ alt, src, href }, index) => (
-              <Link key={index} href={href} passHref>
+              <Link key={index} href={href} legacyBehavior passHref>
                 <a target="_blank">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img {...{ alt, src }} key={index} />
@@ -118,12 +118,12 @@ const Package = ({ name, description, icon, shields, source, documentation }: Pa
               sm: 'flex-start',
             }}
           >
-            <Link passHref href={documentation}>
+            <Link legacyBehavior passHref href={documentation}>
               <Button as="a" variant="solid" textDecoration="none" leftIcon={<FileText />} my={2}>
                 Documentation
               </Button>
             </Link>
-            <Link passHref href={source}>
+            <Link legacyBehavior passHref href={source}>
               <Button as="a" variant="solid" textDecoration="none" leftIcon={<Code />} my={2}>
                 Source
               </Button>
