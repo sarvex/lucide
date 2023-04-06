@@ -646,6 +646,10 @@ export { default as LucideChefHat } from './icons/chef-hat';
 export { default as CherryIcon } from './icons/cherry';
 export { default as LucideCherry } from './icons/cherry';
 
+// ChevronDownSquare aliases
+export { default as ChevronDownSquareIcon } from './icons/chevron-down-square';
+export { default as LucideChevronDownSquare } from './icons/chevron-down-square';
+
 // ChevronDown aliases
 export { default as ChevronDownIcon } from './icons/chevron-down';
 export { default as LucideChevronDown } from './icons/chevron-down';
@@ -658,13 +662,25 @@ export { default as LucideChevronFirst } from './icons/chevron-first';
 export { default as ChevronLastIcon } from './icons/chevron-last';
 export { default as LucideChevronLast } from './icons/chevron-last';
 
+// ChevronLeftSquare aliases
+export { default as ChevronLeftSquareIcon } from './icons/chevron-left-square';
+export { default as LucideChevronLeftSquare } from './icons/chevron-left-square';
+
 // ChevronLeft aliases
 export { default as ChevronLeftIcon } from './icons/chevron-left';
 export { default as LucideChevronLeft } from './icons/chevron-left';
 
+// ChevronRightSquare aliases
+export { default as ChevronRightSquareIcon } from './icons/chevron-right-square';
+export { default as LucideChevronRightSquare } from './icons/chevron-right-square';
+
 // ChevronRight aliases
 export { default as ChevronRightIcon } from './icons/chevron-right';
 export { default as LucideChevronRight } from './icons/chevron-right';
+
+// ChevronUpSquare aliases
+export { default as ChevronUpSquareIcon } from './icons/chevron-up-square';
+export { default as LucideChevronUpSquare } from './icons/chevron-up-square';
 
 // ChevronUp aliases
 export { default as ChevronUpIcon } from './icons/chevron-up';
