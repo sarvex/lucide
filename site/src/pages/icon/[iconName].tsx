@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import IconDetailOverlay from '../../components/IconDetailOverlay';
 import { getAllData, getData } from '../../lib/icons';
 import IconOverview from '../../components/IconOverview';
-import Layout from '../../components/Layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getAllCategories } from 'src/lib/categories';
 
@@ -38,10 +37,10 @@ const IconPage = ({ icon, data, categories }): JSX.Element => {
   }, [router.query]);
 
   return (
-    <Layout>
+    <>
       <IconDetailOverlay key={currentIcon.name} icon={currentIcon} close={onClose} open />
       <IconOverview {...{ data, categories }} key="icon-overview" />
-    </Layout>
+    </>
   );
 };
 

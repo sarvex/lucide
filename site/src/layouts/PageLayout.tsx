@@ -13,8 +13,8 @@ import { useKeyBindings } from '../lib/key';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useMobileNavigationContext, useMobileNavigationValue } from './MobileNavigationProvider';
-import Logo from './Logo';
+import { useMobileNavigationContext, useMobileNavigationValue } from '../components/MobileNavigationProvider';
+import Logo from '../components/Logo';
 import menuItems from '../static/menuItems';
 
 interface LayoutProps extends BoxProps {

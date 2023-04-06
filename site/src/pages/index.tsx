@@ -1,4 +1,3 @@
-import Layout from '../components/Layout';
 import { getAllData } from '../lib/icons';
 
 import IconOverview from '../components/IconOverview';
@@ -25,8 +24,7 @@ const HomePage: NextPage<HomePageProps> = ({ data, categories }) => {
   }, [router.query])
 
   return (
-    <Layout>
-      <MobileMenu />
+    <>
       <IconDetailOverlay
         open={!!currentIcon?.name}
         icon={currentIcon}
@@ -40,7 +38,7 @@ const HomePage: NextPage<HomePageProps> = ({ data, categories }) => {
       />
       <Header {...{ data }} />
       <IconOverview {...{ data, categories }} />
-    </Layout>
+    </>
   );
 };
 

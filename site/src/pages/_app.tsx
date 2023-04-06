@@ -1,25 +1,21 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import customTheme from '../lib/theme';
 import '../assets/styling.css';
-import Head from 'next/head';
-import { CustomizeIconContext } from '../components/CustomizeIconContext';
-import { MobileNavigationProvider } from '../components/MobileNavigationProvider';
+import MainLayout from 'src/layouts/MainLayout';
 
 const App = ({ Component, pageProps }) => {
+
+  if (Component.getLayout === undefined) {
+    return (
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    )
+  }
+
   return (
-    <>
-      <Head>
-        <title>Lucide</title>
-      </Head>
-      <ChakraProvider theme={customTheme}>
-        <MobileNavigationProvider>
-          <CustomizeIconContext>
-            <Component {...pageProps} />
-          </CustomizeIconContext>
-        </MobileNavigationProvider>
-      </ChakraProvider>
-    </>
-  );
+    <MainLayout>
+      {Component.getLayout(<Component {...pageProps} />)}
+    </MainLayout>
+  )
 };
 
 export default App;

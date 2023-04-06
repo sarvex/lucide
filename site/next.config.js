@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx',
+  themeConfig: './src/theme.config.tsx',
 })
 
 /* eslint-disable */

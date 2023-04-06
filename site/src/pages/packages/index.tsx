@@ -1,6 +1,3 @@
-import Layout from '../../components/Layout';
-import HeadingNavigationProvider from '../../components/HeadingNavigationProvider';
-import MobileMenu from '../../components/MobileMenu';
 import { Stack } from '@chakra-ui/react';
 import Package, { PackageItem } from '../../components/Package';
 import packagesData from '../../data/packageData.json';
@@ -16,28 +13,25 @@ interface PackagesPageProps {
 
 const PackagesPage = ({ packages, thirdPartyPackages }: PackagesPageProps): JSX.Element => {
   return (
-    <HeadingNavigationProvider>
-      <MobileMenu />
-      <Layout>
-        <Heading as="h1" marginBottom={6} textAlign="center">
-          Packages
-        </Heading>
-        <Stack spacing={8} align="center">
-          {packages.length
-            ? packages.map((packageItem) => <Package key={packageItem.name} {...packageItem} />)
-            : null}
-        </Stack>
+    <>
+      <Heading as="h1" marginBottom={6} textAlign="center">
+        Packages
+      </Heading>
+      <Stack spacing={8} align="center">
+        {packages.length
+          ? packages.map((packageItem) => <Package key={packageItem.name} {...packageItem} />)
+          : null}
+      </Stack>
 
-        <Heading as="h1" marginBottom={6} marginTop={12} textAlign="center">
-          Third party packages
-        </Heading>
-        <Stack spacing={8} marginBottom={6} align="center">
-          {thirdPartyPackages.length
-            ? thirdPartyPackages.map((packageItem) => (<Package key={packageItem.name} {...packageItem} />))
-            : null}
-        </Stack>
-      </Layout>
-    </HeadingNavigationProvider>
+      <Heading as="h1" marginBottom={6} marginTop={12} textAlign="center">
+        Third party packages
+      </Heading>
+      <Stack spacing={8} marginBottom={6} align="center">
+        {thirdPartyPackages.length
+          ? thirdPartyPackages.map((packageItem) => (<Package key={packageItem.name} {...packageItem} />))
+          : null}
+      </Stack>
+    </>
   );
 };
 

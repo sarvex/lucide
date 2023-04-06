@@ -1,7 +1,4 @@
-import Layout from '../components/Layout';
 import Head from 'next/head';
-
-import MobileMenu from '../components/MobileMenu';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
@@ -9,35 +6,32 @@ import { GetStaticProps } from 'next';
 
 const LicensePage = ({ licenseText }: { licenseText: string[] }): JSX.Element => {
   return (
-    <Box>
-      <MobileMenu />
-      <Layout>
-        <Head>
-          <title>License - Lucide</title>
-        </Head>
+    <>
+      <Head>
+        <title>License - Lucide</title>
+      </Head>
 
-        <Box maxWidth="xl" width="100%" marginX="auto">
-          <Heading as="h1" mb={4}>
-            Lucide License
-          </Heading>
-          {licenseText.map((text, index) => {
-            if (index === 0) {
-              return (
-                <Heading as="h2" fontSize={24} mb={8}>
-                  {text}
-                </Heading>
-              );
-            }
-
+      <Box maxWidth="xl" width="100%" marginX="auto">
+        <Heading as="h1" mb={4}>
+          Lucide License
+        </Heading>
+        {licenseText.map((text, index) => {
+          if (index === 0) {
             return (
-              <Text fontSize={19} mb={4}>
+              <Heading as="h2" fontSize={24} mb={8}>
                 {text}
-              </Text>
+              </Heading>
             );
-          })}
-        </Box>
-      </Layout>
-    </Box>
+          }
+
+          return (
+            <Text fontSize={19} mb={4}>
+              {text}
+            </Text>
+          );
+        })}
+      </Box>
+    </>
   );
 };
 

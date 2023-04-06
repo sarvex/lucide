@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "John Letey",
   "scripts": {
-    "dev": "pnpm copy:docs && pnpm prebuild && next dev",
+    "dev": "pnpm copy:docs && next dev",
     "copy:docs": "cp -rf ../docs ./src/pages",
     "prebuild": "ts-node --swc scripts/preBuild.ts && pnpm -w lucide-react build",
     "build": "pnpm copy:docs && pnpm prebuild && next build",
